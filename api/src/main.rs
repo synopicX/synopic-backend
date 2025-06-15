@@ -6,7 +6,7 @@ async fn index() -> impl Responder {
 }
 
 #[actix_web::main]
-async fn main() -> Result<()> {
+async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             .service(index)
